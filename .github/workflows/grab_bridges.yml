@@ -3,7 +3,11 @@ name: Обновление Vanilla Мостов
 on:
   schedule:
     - cron: '0 */6 * * *' # Авто-запуск каждые 6 часов
-  workflow_dispatch:      # Кнопка для ручного запуска в интерфейсе GitHub
+  workflow_dispatch:      # Кнопка для ручного запуска
+
+# ДОБАВЛЕНО: Разрешаем боту записывать изменения в репозиторий
+permissions:
+  contents: write
 
 jobs:
   build-and-grab:
